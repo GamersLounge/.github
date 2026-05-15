@@ -1,0 +1,59 @@
+name: 🐞 Bug Report
+
+description: Report a bug or an issue
+
+title: "[Bug]: "
+
+labels: [ "bug" ]
+
+body:
+  - type: markdown
+    attributes:
+      value: |
+        The more detail, the faster we can fix the issue.
+
+  - type: textarea
+    id: what-happened
+    attributes:
+      label: What happened?
+      description: A clear description of the bug. What did you do, what did you expect, what happened instead?
+      placeholder: "When I clicked Checkout, I got a 500 error instead of being redirected to payment..."
+    validations:
+      required: true
+
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to reproduce
+      description: Walk us through how to trigger this bug.
+      placeholder: |
+        1. Go to "..."
+        2. Click on "..."
+        3. See error
+    validations:
+      required: true
+
+  - type: textarea
+    id: screenshots
+    attributes:
+      label: Screenshots or videos
+      description: Drag and drop any visuals here. Optional but very helpful.
+
+  - type: dropdown
+    id: severity
+    attributes:
+      label: How bad is it?
+      options:
+        - Blocking (can't use the app at all)
+        - Major (a feature is broken)
+        - Minor (annoying but workable)
+        - Cosmetic (visual only)
+    validations:
+      required: true
+
+  - type: input
+    id: environment
+    attributes:
+      label: Browser / device
+      description: e.g. "Chrome 120 on Windows" or "iPhone 14, iOS 17"
+      placeholder: "Chrome 120 on Windows"
