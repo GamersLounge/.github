@@ -1,0 +1,37 @@
+name: 💡 Feature Request
+
+description: Suggest a new feature or enhancement
+
+title: "[Feature]: "
+
+labels: [ "enhancement" ]
+
+body:
+  - type: textarea
+    id: problem
+    attributes:
+      label: What problem are you trying to solve?
+      description: Explain the pain point. Not the solution yet.
+      placeholder: "Users have to re-enter their card every time because..."
+    validations:
+      required: true
+
+  - type: textarea
+    id: solution
+    attributes:
+      label: What would you like to see?
+      description: Your idea for solving the problem.
+    validations:
+      required: true
+
+  - type: dropdown
+    id: pain
+    attributes:
+      label: How much impact do you think this have?
+      options:
+        - Nice to have (small quality of life)
+        - Friction point (workaround exists, but it's annoying)
+        - Blocking (users genuinely can't do the thing without this)
+        - Strategic (unlocks something bigger we want to build)
+    validations:
+      required: true
